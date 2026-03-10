@@ -149,8 +149,9 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             .then(response => {
                 if (response.ok) {
-                    showNotification('Thank you! We\'ll get back to you within 24 hours.', 'success');
-                    contactForm.reset();
+                    // Redirect to a lightweight thank-you page
+                    window.location.href = '/thank-you.html';
+                    return;
                 } else {
                     return response.json().then(data => {
                         throw new Error(data.errors ? data.errors.map(e => e.message).join(', ') : 'Something went wrong.');
