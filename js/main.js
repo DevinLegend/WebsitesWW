@@ -127,28 +127,43 @@ document.addEventListener('DOMContentLoaded', () => {
             const data = Object.fromEntries(formData.entries());
 
             // Basic validation
-            if (!data.name || !data.email || !data.message) {
+            if (!data.Name || !data.Email || !data.Message) {
                 showNotification('Please fill in all required fields.', 'error');
                 return;
             }
 
-            if (!isValidEmail(data.email)) {
+            if (!isValidEmail(data.Email)) {
                 showNotification('Please enter a valid email address.', 'error');
                 return;
             }
 
-            // Simulate form submission
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalText = submitBtn.textContent;
             submitBtn.textContent = 'Sending...';
             submitBtn.disabled = true;
 
-            setTimeout(() => {
-                showNotification('Thank you! We\'ll get back to you within 24 hours.', 'success');
-                contactForm.reset();
+            fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            })
+            .then(response => {
+                if (response.ok) {
+                    showNotification('Thank you! We\'ll get back to you within 24 hours.', 'success');
+                    contactForm.reset();
+                } else {
+                    return response.json().then(data => {
+                        throw new Error(data.errors ? data.errors.map(e => e.message).join(', ') : 'Something went wrong.');
+                    });
+                }
+            })
+            .catch(error => {
+                showNotification(error.message || 'Something went wrong. Please try again.', 'error');
+            })
+            .finally(() => {
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
-            }, 1500);
+            });
         });
     }
 

@@ -490,33 +490,37 @@
                     </div>
                 </div>
 
-                <form class="contact__form" id="contactForm" action="#" method="POST">
+                <form class="contact__form" id="contactForm" action="https://formspree.io/f/xpqypwdj" method="POST">
+                    <!-- Formspree honeypot (spam protection) -->
+                    <input type="text" name="_gotcha" style="display:none">
+                    <!-- Custom subject line -->
+                    <input type="hidden" name="_subject" value="New WebsitesWW.com Inquiry">
                     <div class="form__group">
                         <label for="name" class="form__label">Your Name</label>
-                        <input type="text" id="name" name="name" class="form__input" placeholder="John Doe" required>
+                        <input type="text" id="name" name="Name" class="form__input" placeholder="John Doe" required>
                     </div>
                     <div class="form__group">
                         <label for="email" class="form__label">Email Address</label>
-                        <input type="email" id="email" name="email" class="form__input" placeholder="john@example.com" required>
+                        <input type="email" id="email" name="Email" class="form__input" placeholder="john@example.com" required>
                     </div>
                     <div class="form__group">
                         <label for="phone" class="form__label">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" class="form__input" placeholder="(555) 123-4567">
+                        <input type="tel" id="phone" name="Phone" class="form__input" placeholder="(555) 123-4567">
                     </div>
                     <div class="form__group">
                         <label for="service" class="form__label">Service Interested In</label>
-                        <select id="service" name="service" class="form__input form__select">
+                        <select id="service" name="Service" class="form__input form__select">
                             <option value="" disabled selected>Select a service...</option>
-                            <option value="single-page">Single Page Website</option>
-                            <option value="business-site">Business Website (Multi-Page)</option>
-                            <option value="redesign">Website Redesign</option>
-                            <option value="maintenance">Updates & Maintenance</option>
-                            <option value="other">Other / Not Sure</option>
+                            <option value="Single Page Website">Single Page Website</option>
+                            <option value="Business Website (Multi-Page)">Business Website (Multi-Page)</option>
+                            <option value="Website Redesign">Website Redesign</option>
+                            <option value="Updates & Maintenance">Updates & Maintenance</option>
+                            <option value="Other / Not Sure">Other / Not Sure</option>
                         </select>
                     </div>
                     <div class="form__group form__group--full">
                         <label for="message" class="form__label">Tell Us About Your Project</label>
-                        <textarea id="message" name="message" class="form__input form__textarea" placeholder="Describe your project, goals, and any specific features you need..." rows="5" required></textarea>
+                        <textarea id="message" name="Message" class="form__input form__textarea" placeholder="Describe your project, goals, and any specific features you need..." rows="5" required></textarea>
                     </div>
                     <button type="submit" class="btn btn--primary btn--full">Send Message →</button>
                 </form>
