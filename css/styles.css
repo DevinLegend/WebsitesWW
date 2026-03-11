@@ -1153,6 +1153,7 @@ thead .pricing-table__featured {
     font-size: var(--fs-sm);
 }
 
+.footer__links h3,
 .footer__links h4 {
     font-size: var(--fs-sm);
     font-weight: var(--fw-semibold);
