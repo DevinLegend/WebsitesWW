@@ -10,14 +10,16 @@
     --clr-primary-dark: #4338ca;
     --clr-primary-light: #818cf8;
     --clr-primary-glow: rgba(79, 70, 229, 0.15);
-    --clr-accent: #06b6d4;
+    /* Slightly darker accent for better contrast */
+    --clr-accent: #0e7b90;
     --clr-accent-light: #22d3ee;
 
     --clr-dark: #0f172a;
     --clr-dark-2: #1e293b;
     --clr-dark-3: #334155;
-    --clr-gray: #64748b;
-    --clr-gray-light: #94a3b8;
+    /* Darker gray for small text contrast */
+    --clr-gray: #556579;
+    --clr-gray-light: #8b99a9;
     --clr-light: #f1f5f9;
     --clr-light-2: #e2e8f0;
     --clr-white: #ffffff;
@@ -103,6 +105,38 @@ body {
     background-color: var(--clr-white);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+/* Skip link (accessible keyboard navigation) */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+.skip-link:focus {
+    position: fixed;
+    left: 1rem;
+    top: 1rem;
+    width: auto;
+    height: auto;
+    background: var(--clr-primary);
+    color: var(--clr-white);
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--radius-sm);
+    z-index: 9999;
+}
+
+/* Focus styles for keyboard users */
+:focus {
+    outline: none;
+}
+
+:focus-visible {
+    outline: 3px solid var(--clr-accent);
+    outline-offset: 3px;
 }
 
 img {
