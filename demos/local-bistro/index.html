@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Bistro | Fresh, Local, Delicious</title>
+    <meta name="description" content="Local Bistro — Farm-to-table dining in the heart of downtown. View our menu, make reservations, and see what's fresh today.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav class="nav">
+        <div class="container">
+            <a href="index.html" class="nav__logo">Local<span>Bistro</span></a>
+            <ul class="nav__links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero__overlay"></div>
+        <div class="container hero__content">
+            <span class="hero__badge">Farm to Table</span>
+            <h1>Fresh. Local. <span>Delicious.</span></h1>
+            <p>Seasonal dishes crafted with ingredients from local farms. A dining experience that feels like home.</p>
+            <div class="hero__actions">
+                <a href="menu.html" class="btn btn--primary">View Our Menu</a>
+                <a href="contact.html" class="btn btn--outline">Reserve a Table</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WELCOME -->
+    <section class="welcome">
+        <div class="container">
+            <div class="welcome__grid">
+                <div class="welcome__text">
+                    <span class="tag">Our Story</span>
+                    <h2>A neighborhood favorite since 2010</h2>
+                    <p>What started as a small café with a big dream has grown into the community's go-to spot for fresh, seasonal food. We partner with local farms to bring you the best ingredients every single day.</p>
+                    <a href="about.html" class="btn btn--primary">Learn More</a>
+                </div>
+                <div class="welcome__image">
+                    <div class="placeholder-img placeholder-img--warm"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED -->
+    <section class="featured">
+        <div class="container">
+            <span class="tag tag--center">What's Popular</span>
+            <h2 class="section-title">Featured Dishes</h2>
+            <p class="section-sub">Handpicked favorites from our seasonal menu.</p>
+            <div class="featured__grid">
+                <div class="dish-card">
+                    <div class="dish-card__img placeholder-img placeholder-img--1"></div>
+                    <div class="dish-card__body">
+                        <h3>Pan-Seared Salmon</h3>
+                        <p>With lemon-dill cream, roasted asparagus & herb rice.</p>
+                        <span class="dish-card__price">$24</span>
+                    </div>
+                </div>
+                <div class="dish-card">
+                    <div class="dish-card__img placeholder-img placeholder-img--2"></div>
+                    <div class="dish-card__body">
+                        <h3>Heirloom Tomato Salad</h3>
+                        <p>Farm-fresh tomatoes, burrata, basil & balsamic reduction.</p>
+                        <span class="dish-card__price">$16</span>
+                    </div>
+                </div>
+                <div class="dish-card">
+                    <div class="dish-card__img placeholder-img placeholder-img--3"></div>
+                    <div class="dish-card__body">
+                        <h3>Truffle Mushroom Pasta</h3>
+                        <p>Handmade pappardelle with wild mushrooms & truffle butter.</p>
+                        <span class="dish-card__price">$22</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What People Are Saying</h2>
+            <div class="testimonials__grid">
+                <div class="testimonial-card">
+                    <p>"Hands down the best pasta I've ever had. The atmosphere is warm and the staff treats you like family."</p>
+                    <strong>— Sarah M.</strong>
+                </div>
+                <div class="testimonial-card">
+                    <p>"We come here every Friday. The seasonal menu always has something new and exciting. Can't recommend it enough."</p>
+                    <strong>— James & Kate R.</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready for a great meal?</h2>
+            <p>Book your table today or stop by — walk-ins always welcome.</p>
+            <a href="contact.html" class="btn btn--primary">Reserve a Table</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer__grid">
+            <div>
+                <div class="footer__logo">Local<span>Bistro</span></div>
+                <p>123 Main Street, Downtown<br>Open Tues–Sun, 11am–10pm</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Contact</h3>
+                <p>hello@localbistro.com<br>(555) 234-5678</p>
+            </div>
+        </div>
+        <div class="container footer__bottom">
+            <p>&copy; 2026 Local Bistro. All Rights Reserved.</p>
+            <p>Website built by <a href="https://websitesww.com" target="_blank">WebsitesWW.com</a></p>
+        </div>
+    </footer>
+
+    <script>
+        const toggle = document.getElementById('navToggle');
+        const links = document.getElementById('navLinks');
+        toggle.addEventListener('click', () => links.classList.toggle('open'));
+    </script>
+</body>
+</html>
