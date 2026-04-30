@@ -129,21 +129,63 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Mobile menu toggle ---
     const mobileToggle = document.getElementById('mobileToggle');
     const navLinks = document.getElementById('navLinks');
+    const navActions = document.querySelector('.nav-actions');
 
     if (mobileToggle && navLinks) {
+        let mobileActionsLi = null;
+
+        const insertMobileActions = () => {
+            if (!navActions || mobileActionsLi) return;
+            const clone = navActions.cloneNode(true);
+            clone.classList.add('nav-actions-mobile');
+            const li = document.createElement('li');
+            li.className = 'nav-actions-li';
+            li.appendChild(clone);
+            navLinks.appendChild(li);
+            mobileActionsLi = li;
+        };
+
+        const removeMobileActions = () => {
+            if (mobileActionsLi) {
+                mobileActionsLi.remove();
+                mobileActionsLi = null;
+            }
+        };
+
+        const closeMenu = () => {
+            navLinks.classList.remove('active');
+            document.body.classList.remove('menu-open');
+            mobileToggle.classList.remove('open');
+            removeMobileActions();
+        };
+
         mobileToggle.addEventListener('click', () => {
+            const willOpen = !navLinks.classList.contains('active');
             navLinks.classList.toggle('active');
             document.body.classList.toggle('menu-open');
             mobileToggle.classList.toggle('open');
+            if (willOpen) {
+                insertMobileActions();
+            } else {
+                removeMobileActions();
+            }
         });
 
-        // Close menu on link click
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                document.body.classList.remove('menu-open');
-                mobileToggle.classList.remove('open');
-            });
+        navLinks.addEventListener('click', (event) => {
+            const link = event.target.closest('a');
+            if (!link) return;
+            const isAction = link.closest('.nav-actions-mobile');
+            if (link.getAttribute('href') && link.getAttribute('href').startsWith('#') && !isAction) {
+                closeMenu();
+                return;
+            }
+            closeMenu();
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 960 && navLinks.classList.contains('active')) {
+                closeMenu();
+            }
         });
     }
 
