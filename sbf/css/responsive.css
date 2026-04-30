@@ -1,0 +1,706 @@
+/* ===================================
+   Responsive Design
+   =================================== */
+
+/* Large tablets / small desktops */
+@media (max-width: 1024px) {
+    .about-grid {
+        gap: 48px;
+    }
+
+    .specialties-grid,
+    .specialties-page-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services-grid .service-card:last-child {
+        grid-column: span 2;
+        max-width: 500px;
+        justify-self: center;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* Collapse nav to drawer earlier so phone + quote stay readable */
+@media (max-width: 960px) {
+    body.menu-open {
+        overflow: hidden;
+    }
+
+    .navbar,
+    .navbar-transparent,
+    .navbar-transparent.scrolled {
+        background: rgba(13,17,23,0.9);
+        border-bottom-color: rgba(255,255,255,0.08);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-toggle {
+        display: flex;
+        z-index: 1002;
+    }
+
+    .nav-inner {
+        gap: 12px;
+        height: 68px;
+    }
+
+    /* Hide the inline phone + quote when there's no room; they reappear inside the drawer */
+    .nav-actions {
+        display: none;
+    }
+
+    /* Drawer panel (shared by transparent + solid nav variants) */
+    .nav-links {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        min-height: 100dvh;
+        background: rgba(13,17,23,0.96);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 96px 24px 160px;
+        z-index: 1001;
+        overflow-y: auto;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        font-size: 1.25rem;
+        padding: 14px 28px;
+        color: var(--white) !important;
+        background: transparent !important;
+        text-shadow: none !important;
+    }
+
+    .nav-links a.active,
+    .nav-links a:hover {
+        color: var(--accent) !important;
+    }
+
+    /* Reveal the phone + quote CTA at the bottom of the open drawer */
+    body.menu-open .nav-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: max(34px, env(safe-area-inset-bottom));
+        z-index: 1001;
+        margin: 0;
+        padding: 0 24px;
+    }
+
+    body.menu-open .nav-phone {
+        font-size: 1.1rem;
+        color: var(--white) !important;
+        text-shadow: none !important;
+    }
+
+    body.menu-open .nav-quote {
+        padding: 14px 32px;
+        font-size: 1rem;
+    }
+
+    .mobile-toggle.open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .mobile-toggle.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-toggle.open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .top-bar {
+        display: none;
+    }
+
+    .logo-img {
+        height: 42px;
+    }
+
+    .hero {
+        min-height: 620px;
+        min-height: 100svh;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.15rem, 10vw, 3.1rem);
+        line-height: 1.04;
+    }
+
+    .hero-sub {
+        font-size: 1.05rem;
+    }
+
+    .hero-content {
+        padding: 92px 0 76px;
+    }
+
+    .hero-arrow {
+        display: none;
+    }
+
+    .hero-dots {
+        bottom: 58px;
+        gap: 8px;
+    }
+
+    .hero-dot { width: 22px; }
+    .hero-dot.is-active { width: 36px; }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        max-width: 340px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    .stats-strip {
+        margin-top: -32px;
+        border-radius: 22px 22px 0 0;
+        padding-top: 48px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px 16px;
+    }
+
+    .stat-block {
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+        padding-bottom: 20px;
+    }
+
+    .stat-block:nth-last-child(-n+2) {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .trust-row {
+        gap: 20px;
+        font-size: 0.8rem;
+        flex-wrap: wrap;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-text {
+        text-align: left;
+    }
+
+    .contact-info-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .about-img-secondary {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        width: 100%;
+        margin-top: -40px;
+        border-width: 4px;
+    }
+
+    .about-badge-float {
+        width: 104px;
+        height: 104px;
+        top: -10px;
+        right: 16px;
+        border-width: 3px;
+        outline-offset: -8px;
+    }
+
+    .about-badge-float::before,
+    .about-badge-float::after {
+        top: 14px;
+        width: 19px;
+        height: 72px;
+    }
+
+    .badge-number {
+        font-size: 1.55rem;
+    }
+
+    .badge-text {
+        font-size: 0.53rem;
+        letter-spacing: 0.7px;
+    }
+
+    .badge-since {
+        font-size: 0.45rem;
+        letter-spacing: 0.9px;
+    }
+
+    .about-features {
+        grid-template-columns: 1fr;
+    }
+
+    .specialties-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-grid .service-card:last-child {
+        grid-column: span 1;
+        max-width: 100%;
+    }
+
+    .section {
+        padding: 64px 0;
+    }
+
+    .section-header {
+        margin-bottom: 38px;
+    }
+
+    .section-desc,
+    .lead {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .page-header {
+        padding: 120px 0 60px;
+    }
+
+    .page-header--photo {
+        min-height: 520px;
+    }
+
+    .page-header--photo .container {
+        padding-top: 112px;
+        padding-bottom: 58px;
+    }
+
+    .page-header--photo h1 {
+        font-size: clamp(2.15rem, 9vw, 3rem);
+    }
+
+    .page-header--photo p {
+        font-size: 1.05rem;
+        max-width: 540px;
+    }
+
+    .testimonial-card {
+        padding: 40px 32px;
+    }
+
+    .testimonial-card blockquote {
+        font-size: 1.1rem;
+    }
+
+    .review-grid {
+        grid-template-columns: 1fr;
+        max-width: 680px;
+        margin: 0 auto;
+    }
+
+    .review-card {
+        min-height: auto;
+        padding: 30px 26px 26px;
+    }
+
+    .review-stars {
+        font-size: 1.25rem;
+        letter-spacing: 3px;
+    }
+
+    .testimonial-section--photo {
+        padding-top: 70px;
+        padding-bottom: 70px;
+        background-attachment: scroll;
+    }
+
+    .trust-items {
+        gap: 24px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        text-align: center;
+    }
+
+    .footer-contact-info {
+        align-items: center;
+    }
+
+    .specialties-page-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-form-wrapper {
+        padding: 32px 24px;
+    }
+
+    .contact-info-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .quote-sheet-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .quote-sheet-preview {
+        max-width: 520px;
+        margin: 0 auto;
+    }
+
+    .quote-sheet-actions .btn {
+        flex: 1 1 200px;
+        justify-content: center;
+    }
+
+    .history-panel {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 34px;
+    }
+
+    .history-stat {
+        justify-self: start;
+        width: 150px;
+        height: 150px;
+    }
+
+    .history-stat-number {
+        font-size: 2rem;
+    }
+
+    .history-proof-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group.full-width {
+        grid-column: 1;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 18px;
+    }
+
+    .btn,
+    .btn-lg {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .logo-img {
+        height: 38px;
+        max-width: 210px;
+    }
+
+    .nav-links {
+        padding-top: 84px;
+        padding-bottom: 150px;
+    }
+
+    .nav-links a {
+        font-size: 1.1rem;
+        padding: 12px 24px;
+    }
+
+    body.menu-open .nav-phone,
+    body.menu-open .nav-quote {
+        width: min(100%, 320px);
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 640px;
+        min-height: 100svh;
+    }
+
+    .hero h1 {
+        font-size: clamp(2rem, 12vw, 2.75rem);
+    }
+
+    .hero-badge {
+        font-size: 0.75rem;
+        padding: 6px 14px;
+        margin-bottom: 18px;
+    }
+
+    .hero-sub {
+        font-size: 0.98rem;
+        margin-bottom: 26px;
+    }
+
+    .hero-dots {
+        bottom: 42px;
+    }
+
+    .stats-strip {
+        padding: 34px 0 30px;
+        margin-top: -26px;
+        border-radius: 18px 18px 0 0;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 18px 10px;
+    }
+
+    .stat-block .stat-number {
+        font-size: 1.75rem;
+    }
+
+    .stat-label {
+        font-size: 0.72rem;
+        line-height: 1.35;
+    }
+
+    .trust-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .about-img-main img {
+        height: 360px;
+    }
+
+    .about-img-secondary {
+        margin-top: 14px;
+    }
+
+    .about-points {
+        gap: 14px;
+    }
+
+    .about-point {
+        grid-template-columns: 18px 1fr;
+        gap: 12px;
+    }
+
+    .specialty-card {
+        border-radius: var(--radius-lg);
+    }
+
+    .specialty-img {
+        height: 230px;
+    }
+
+    .review-card {
+        padding: 28px 24px 24px;
+    }
+
+    .review-card blockquote {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .testimonial-section--photo {
+        padding-top: 56px;
+        padding-bottom: 56px;
+    }
+
+    .page-header--photo {
+        min-height: 500px;
+    }
+
+    .page-header--photo .container {
+        padding-top: 104px;
+        padding-bottom: 46px;
+    }
+
+    .page-header-badge {
+        font-size: 0.7rem;
+        padding: 6px 14px;
+        letter-spacing: 1px;
+    }
+
+    .page-header--photo p {
+        font-size: 0.98rem;
+        line-height: 1.65;
+    }
+
+    .specialties-grid,
+    .specialties-page-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .specialty-page-card .card-img {
+        height: 240px;
+    }
+
+    .specialty-page-card .card-body {
+        padding: 22px;
+    }
+
+    .trust-items {
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+    }
+
+    .areas-grid {
+        gap: 8px;
+    }
+
+    .area-tag {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+
+    .cta-banner {
+        padding: 72px 0;
+    }
+
+    .cta-content h2 {
+        font-size: clamp(2rem, 10vw, 2.6rem);
+    }
+
+    .cta-content p {
+        font-size: 1rem;
+        margin-bottom: 28px;
+    }
+
+    .cta-buttons,
+    .quote-sheet-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .quote-sheet-info .lead {
+        font-size: 1rem;
+    }
+
+    .quote-sheet-steps li {
+        padding: 14px 16px 14px 54px;
+        font-size: 0.92rem;
+    }
+
+    .quote-sheet-steps li::before {
+        left: 12px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .contact-info-card {
+        padding: 22px;
+    }
+
+    .contact-form-wrapper {
+        padding: 28px 20px;
+        border-radius: var(--radius-lg);
+    }
+
+    .faq-question {
+        padding: 18px;
+        gap: 16px;
+        font-size: 0.95rem;
+    }
+
+    .faq-answer-inner {
+        padding: 0 18px 18px;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+    .container {
+        padding: 0 14px;
+    }
+
+    .logo-img {
+        height: 34px;
+        max-width: 185px;
+    }
+
+    .hero h1,
+    .page-header--photo h1 {
+        font-size: 2rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-block {
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+        padding-bottom: 18px;
+    }
+
+    .stat-block:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+}

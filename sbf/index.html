@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>South Bay Fence Co. | San Diego's Premier Fence Contractor Since 1960</title>
+    <meta name="description" content="South Bay Fence, Inc. — Family-owned commercial chain link fence contractor and material supplier serving San Diego since 1960. No Job Too Tough.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-transparent" id="navbar">
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <img src="images/Logo-wht-version.png" alt="South Bay Fence Co. Logo" class="logo-img logo-white">
+                <img src="images/logo.png" alt="South Bay Fence Co. Logo" class="logo-img logo-dark">
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="specialties.html">Specialties</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="tel:6194203410" class="nav-phone">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    <span>(619) 420-3410</span>
+                </a>
+                <a href="contact.html" class="btn btn-primary nav-quote">Get A Quote</a>
+            </div>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-slides" id="heroSlides">
+            <div class="hero-slide is-active" style="background-image: url('images/AdobeStock_401414377-Large.jpeg');"></div>
+            <div class="hero-slide" style="background-image: url('images/Pipe-Arm-Gate-installation-in-San-Diego-Area-1.jpg');"></div>
+            <div class="hero-slide" style="background-image: url('images/SBFCO-3.jpg');"></div>
+            <div class="hero-slide" style="background-image: url('images/SBFCO-9.jpg');"></div>
+            <div class="hero-slide" style="background-image: url('images/SBFCO-13.jpg');"></div>
+            <div class="hero-slide" style="background-image: url('images/SBFCO-22.jpg');"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="hero-badge">Family Owned &middot; Since 1960</div>
+            <h1>San Diego's Toughest<br><span class="highlight">Fences.</span></h1>
+            <p class="hero-sub">"No Job Too Tough"</p>
+            <div class="hero-buttons">
+                <a href="contact.html" class="btn btn-primary btn-lg">Get A Quote</a>
+                <a href="tel:6194203410" class="btn btn-outline-white btn-lg">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    Call (619) 420-3410
+                </a>
+            </div>
+        </div>
+        <button class="hero-arrow hero-prev" id="heroPrev" aria-label="Previous slide">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button class="hero-arrow hero-next" id="heroNext" aria-label="Next slide">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+        <div class="hero-dots" id="heroDots" role="tablist" aria-label="Slide selector">
+            <button class="hero-dot is-active" data-slide="0" aria-label="Slide 1"></button>
+            <button class="hero-dot" data-slide="1" aria-label="Slide 2"></button>
+            <button class="hero-dot" data-slide="2" aria-label="Slide 3"></button>
+            <button class="hero-dot" data-slide="3" aria-label="Slide 4"></button>
+            <button class="hero-dot" data-slide="4" aria-label="Slide 5"></button>
+            <button class="hero-dot" data-slide="5" aria-label="Slide 6"></button>
+        </div>
+    </section>
+
+    <!-- Stats + Trust Strip -->
+    <section class="stats-strip" id="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-block">
+                    <span class="stat-number">65+</span>
+                    <span class="stat-label">Years in Business</span>
+                </div>
+                <div class="stat-block">
+                    <span class="stat-number">1000+</span>
+                    <span class="stat-label">Projects Completed</span>
+                </div>
+                <div class="stat-block">
+                    <span class="stat-number">16+</span>
+                    <span class="stat-label">Cities Served</span>
+                </div>
+                <div class="stat-block">
+                    <span class="stat-number">AFA</span>
+                    <span class="stat-label">Certified Member</span>
+                </div>
+            </div>
+            <div class="trust-row">
+                <div class="trust-item">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                    <span>Licensed &amp; Insured</span>
+                </div>
+                <div class="trust-item">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    <span>Family Owned</span>
+                </div>
+                <div class="trust-item">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    <span>Project Guidance</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section class="section about-preview">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-images">
+                    <div class="about-img-main">
+                        <img src="images/SBFCO-14.jpg" alt="South Bay Fence commercial project">
+                    </div>
+                    <div class="about-img-secondary">
+                        <img src="images/SBFCO-17.jpg" alt="Fence installation work">
+                    </div>
+                    <div class="about-badge-float">
+                        <span class="badge-number">65+</span>
+                        <span class="badge-text">Years of<br>Excellence</span>
+                        <span class="badge-since">Since 1960</span>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <div class="section-label">About Us</div>
+                    <h2>A Family Company<br>Since <span class="highlight">1960</span></h2>
+                    <p class="lead">Local, family-run, and built on real projects across San Diego since 1960.</p>
+                    <div class="about-points">
+                        <div class="about-point">
+                            <span class="about-point-mark" aria-hidden="true"></span>
+                            <div>
+                                <strong>Rooted in Chula Vista</strong>
+                                <span>65+ years working alongside contractors, schools, and homeowners.</span>
+                            </div>
+                        </div>
+                        <div class="about-point">
+                            <span class="about-point-mark" aria-hidden="true"></span>
+                            <div>
+                                <strong>Commercial Backbone</strong>
+                                <span>Chain link, gates, barricades, cages, schools, parks, and industrial work.</span>
+                            </div>
+                        </div>
+                        <div class="about-point">
+                            <span class="about-point-mark" aria-hidden="true"></span>
+                            <div>
+                                <strong>Working Materials Yard</strong>
+                                <span>A real fence shop on Main St &mdash; supplier and installer in one.</span>
+                            </div>
+                        </div>
+                        <div class="about-point">
+                            <span class="about-point-mark" aria-hidden="true"></span>
+                            <div>
+                                <strong>No Job Too Tough</strong>
+                                <span>Built for complicated sites the easy guys won&rsquo;t take on.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="about.html" class="btn btn-primary">Learn Our Story</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specialties Section -->
+    <section class="section specialties-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <div class="section-label">Our Specialties</div>
+                <h2>Comprehensive Fencing<br><span class="highlight">Solutions</span></h2>
+                <p class="section-desc">From parks and schools to industrial facilities and sports complexes, we deliver expert fencing for every application.</p>
+            </div>
+            <div class="specialties-grid">
+                <a href="specialties.html#chain-link" class="specialty-card">
+                    <div class="specialty-img">
+                        <img src="images/SBFCO-3.jpg" alt="Chain Link Fences">
+                        <div class="specialty-overlay"></div>
+                    </div>
+                    <div class="specialty-info">
+                        <h3>Chain Link Fences</h3>
+                        <p>Durable commercial & industrial chain link solutions</p>
+                        <span class="specialty-link">Learn More →</span>
+                    </div>
+                </a>
+                <a href="specialties.html#custom-gates" class="specialty-card">
+                    <div class="specialty-img">
+                        <img src="images/SBFCO-9.jpg" alt="Custom Gates">
+                        <div class="specialty-overlay"></div>
+                    </div>
+                    <div class="specialty-info">
+                        <h3>Custom Gates</h3>
+                        <p>Tailored gate solutions for any property type</p>
+                        <span class="specialty-link">Learn More →</span>
+                    </div>
+                </a>
+                <a href="specialties.html#ornamental" class="specialty-card">
+                    <div class="specialty-img">
+                        <img src="images/SBFCO-13.jpg" alt="Ornamental Design">
+                        <div class="specialty-overlay"></div>
+                    </div>
+                    <div class="specialty-info">
+                        <h3>Ornamental Design</h3>
+                        <p>Beautiful iron & decorative fence designs</p>
+                        <span class="specialty-link">Learn More →</span>
+                    </div>
+                </a>
+                <a href="specialties.html#barricades" class="specialty-card">
+                    <div class="specialty-img">
+                        <img src="images/SBFCO-40.jpg" alt="Barricades & MBG">
+                        <div class="specialty-overlay"></div>
+                    </div>
+                    <div class="specialty-info">
+                        <h3>Barricades & MBG</h3>
+                        <p>Safety barriers for construction & events</p>
+                        <span class="specialty-link">Learn More →</span>
+                    </div>
+                </a>
+                <a href="specialties.html#school-sites" class="specialty-card">
+                    <div class="specialty-img">
+                        <img src="images/SBFCO-22.jpg" alt="School Sites">
+                        <div class="specialty-overlay"></div>
+                    </div>
+                    <div class="specialty-info">
+                        <h3>School Sites</h3>
+                        <p>Secure perimeter fencing for educational campuses</p>
+                        <span class="specialty-link">Learn More →</span>
+                    </div>
+                </a>
+                <a href="specialties.html#tennis-courts" class="specialty-card">
+                    <div class="specialty-img">
+                        <img src="images/SBFCO-30.jpg" alt="Tennis Courts">
+                        <div class="specialty-overlay"></div>
+                    </div>
+                    <div class="specialty-info">
+                        <h3>Tennis Courts</h3>
+                        <p>Regulation fencing for sports facilities</p>
+                        <span class="specialty-link">Learn More →</span>
+                    </div>
+                </a>
+            </div>
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="specialties.html" class="btn btn-outline">View All Specialties</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section testimonial-section testimonial-section--photo">
+        <div class="container">
+            <div class="section-header text-center">
+                <div class="section-label">Testimonials</div>
+                <h2>Trusted Across <span class="highlight">Chula Vista</span><br>& San Diego</h2>
+                <p class="section-desc">Real words from real customers across Chula Vista and San Diego.</p>
+            </div>
+            <div class="review-grid">
+                <article class="review-card">
+                    <svg class="quote-icon" width="34" height="34" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.3 2.5c-4.8 2.1-8 6.2-8 11.2 0 4 2.3 6.3 5 6.3 2.5 0 4.5-2 4.5-4.5 0-2.3-1.7-4.2-3.9-4.5.3-2.8 2.5-5.5 5.2-6.8L11.3 2.5zM22.1 2.5c-4.8 2.1-8 6.2-8 11.2 0 4 2.3 6.3 5 6.3 2.5 0 4.5-2 4.5-4.5 0-2.3-1.7-4.2-3.9-4.5.3-2.8 2.5-5.5 5.2-6.8L22.1 2.5z"/></svg>
+                    <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                    <blockquote>"Always on time... very professional team... A beautiful black chain link fence."</blockquote>
+                    <div class="review-meta">
+                        <strong>Joey V.</strong>
+                        <span>Residential chain link project · Yahoo/Yelp</span>
+                    </div>
+                </article>
+                <article class="review-card">
+                    <svg class="quote-icon" width="34" height="34" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.3 2.5c-4.8 2.1-8 6.2-8 11.2 0 4 2.3 6.3 5 6.3 2.5 0 4.5-2 4.5-4.5 0-2.3-1.7-4.2-3.9-4.5.3-2.8 2.5-5.5 5.2-6.8L11.3 2.5zM22.1 2.5c-4.8 2.1-8 6.2-8 11.2 0 4 2.3 6.3 5 6.3 2.5 0 4.5-2 4.5-4.5 0-2.3-1.7-4.2-3.9-4.5.3-2.8 2.5-5.5 5.2-6.8L22.1 2.5z"/></svg>
+                    <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                    <blockquote>"They did an excellent job at the Grape Street Dog Park."</blockquote>
+                    <div class="review-meta">
+                        <strong>Luis D.</strong>
+                        <span>Grape Street Dog Park · Yahoo/Yelp</span>
+                    </div>
+                </article>
+                <article class="review-card">
+                    <svg class="quote-icon" width="34" height="34" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.3 2.5c-4.8 2.1-8 6.2-8 11.2 0 4 2.3 6.3 5 6.3 2.5 0 4.5-2 4.5-4.5 0-2.3-1.7-4.2-3.9-4.5.3-2.8 2.5-5.5 5.2-6.8L11.3 2.5zM22.1 2.5c-4.8 2.1-8 6.2-8 11.2 0 4 2.3 6.3 5 6.3 2.5 0 4.5-2 4.5-4.5 0-2.3-1.7-4.2-3.9-4.5.3-2.8 2.5-5.5 5.2-6.8L22.1 2.5z"/></svg>
+                    <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                    <blockquote>"Fabricated and installed a beautiful electric swinging gate... same week."</blockquote>
+                    <div class="review-meta">
+                        <strong>Dalton G.</strong>
+                        <span>Custom electric gate · Public review</span>
+                    </div>
+                </article>
+            </div>
+            <div class="review-cta">
+                <p>Need a fence or gate built by the local team customers talk about?</p>
+                <a href="contact.html" class="btn btn-primary">Request an Estimate</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <img src="images/Logo-wht-version.png" alt="South Bay Fence Co. Logo" class="footer-logo-img">
+                    </a>
+                    <p>Family-owned commercial chain link fence contractor and material supplier serving San Diego for over 65 years.</p>
+                    <div class="footer-contact-info">
+                        <a href="tel:6194203410">(619) 420-3410</a>
+                        <a href="mailto:info@southbayfence.com">info@southbayfence.com</a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=3084%20Main%20St%2C%20Chula%20Vista%2C%20CA%2091911" target="_blank" rel="noopener">3084 Main St, Chula Vista, CA 91911</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="specialties.html">Specialties</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Specialties</h4>
+                    <ul>
+                        <li><a href="specialties.html">Chain Link Fences</a></li>
+                        <li><a href="specialties.html">Custom Gates</a></li>
+                        <li><a href="specialties.html">Ornamental Design</a></li>
+                        <li><a href="specialties.html">Barricades & MBG</a></li>
+                        <li><a href="specialties.html">School Sites</a></li>
+                        <li><a href="specialties.html">Tennis Courts</a></li>
+                        <li><a href="specialties.html">Park Fences</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>What We Do</h4>
+                    <ul>
+                        <li><a href="specialties.html">Commercial Fencing</a></li>
+                        <li><a href="specialties.html">Industrial Fencing</a></li>
+                        <li><a href="specialties.html">Residential Fencing</a></li>
+                        <li><a href="specialties.html">Supplies & Materials</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="about.html">Service Areas</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 South Bay Fence, Inc. All Rights Reserved.</p>
+                <p><a href="https://www.google.com/maps/dir/?api=1&destination=3084%20Main%20St%2C%20Chula%20Vista%2C%20CA%2091911" target="_blank" rel="noopener">3084 Main St, Chula Vista, CA 91911</a> · License #XXXXXX</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
