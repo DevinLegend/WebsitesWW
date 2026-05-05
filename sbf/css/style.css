@@ -545,12 +545,15 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 }
 
 .hero h1 {
+    font-family: 'Oswald', var(--font-sans);
     color: var(--white);
     margin: 0 auto 20px;
     max-width: 880px;
     text-shadow: 0 2px 20px rgba(0,0,0,0.45);
     font-size: clamp(2.6rem, 5.8vw, 4.8rem);
-    letter-spacing: -0.01em;
+    font-weight: 700;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
 }
 
 .hero-sub {
@@ -612,7 +615,7 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 
 .hero-dots {
     position: absolute;
-    bottom: 72px;
+    bottom: 152px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 3;
@@ -649,10 +652,10 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 .stats-strip {
     background: var(--dark);
     color: var(--white);
-    padding: 48px 0 40px;
+    padding: 30px 0 26px;
     position: relative;
     z-index: 4;
-    margin-top: -48px;
+    margin-top: -128px;
     border-radius: 28px 28px 0 0;
     box-shadow: 0 -22px 45px rgba(0,0,0,0.24);
 }
@@ -668,10 +671,12 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
+    grid-template-columns: minmax(160px, 210px) minmax(180px, 230px) minmax(520px, 1fr);
+    gap: 28px;
     align-items: center;
     text-align: center;
+    max-width: 1080px;
+    margin: 0 auto;
 }
 
 .stat-block {
@@ -684,6 +689,33 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 }
 
 .stat-block:last-child { border-right: none; }
+
+.stat-block--license {
+    justify-content: center;
+}
+
+.stat-license {
+    color: var(--white);
+    font-family: var(--font-display);
+    font-size: clamp(1.3rem, 2vw, 1.85rem);
+    font-weight: 900;
+    line-height: 1.1;
+    white-space: nowrap;
+}
+
+.stat-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.stat-block--cities {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 24px;
+    text-align: left;
+}
 
 .stat-block .stat-number {
     font-family: var(--font-display);
@@ -699,6 +731,15 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-weight: 500;
+}
+
+.stat-cities {
+    flex: 0 1 620px;
+    max-width: 620px;
+    margin-top: 0;
+    color: var(--gray-300);
+    font-size: 0.78rem;
+    line-height: 1.45;
 }
 
 .trust-row {
@@ -1237,6 +1278,9 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 
 .testimonial-section--photo .section-header h2 {
     color: var(--white);
+    font-size: clamp(2.4rem, 4.8vw, 4.2rem);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
 }
 
 .testimonial-section--photo .section-desc {
@@ -1471,7 +1515,7 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
    =================================== */
 .page-header {
     background: linear-gradient(135deg, rgba(15,38,64,0.9) 0%, rgba(26,58,92,0.85) 100%),
-                url('../images/Title-BG-scaled.jpg') center/cover;
+                url('../images/Chain-link2.jpeg') center/cover;
     padding: 140px 0 80px;
     text-align: center;
     position: relative;
@@ -1729,6 +1773,36 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 }
 
 /* ===================================
+   Gallery Page
+   =================================== */
+.gallery-category-card {
+    display: block;
+    color: inherit;
+}
+
+.gallery-category-card:hover,
+.gallery-category-card:focus-visible {
+    color: inherit;
+}
+
+.gallery-section {
+    scroll-margin-top: 96px;
+}
+
+.section-light {
+    background: var(--gray-50);
+}
+
+.gallery-photo-grid {
+    margin-top: -8px;
+}
+
+.gallery-photo-grid .portfolio-item {
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(0,0,0,0.06);
+}
+
+/* ===================================
    FAQ Accordion
    =================================== */
 .faq-list {
@@ -1795,6 +1869,26 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 /* ===================================
    Contact Page
    =================================== */
+.contact-info-section {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding-top: 170px;
+    background:
+        radial-gradient(ellipse at center, rgba(13,17,23,0.42) 0%, rgba(13,17,23,0.76) 70%, rgba(13,17,23,0.9) 100%),
+        linear-gradient(180deg, rgba(13,17,23,0.68) 0%, rgba(13,17,23,0.78) 100%),
+        url('../images/Chain-link2.jpeg') center/cover;
+}
+
+.contact-info-section .section-label,
+.contact-info-section h2 {
+    color: var(--white);
+}
+
+.contact-info-section > .container > .contact-grid > div > p {
+    color: rgba(255,255,255,0.82) !important;
+}
+
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -1928,7 +2022,7 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 .history-section {
     position: relative;
     isolation: isolate;
-    background: url('../images/SBFCO-14.jpg') center/cover no-repeat;
+    background: url('../images/ironfencewithgate.jpg') center/cover no-repeat;
     overflow: hidden;
 }
 

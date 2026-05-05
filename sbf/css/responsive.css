@@ -198,7 +198,7 @@
     }
 
     .hero-dots {
-        bottom: 58px;
+        bottom: 128px;
         gap: 8px;
     }
 
@@ -219,9 +219,9 @@
     }
 
     .stats-strip {
-        margin-top: -32px;
+        margin-top: -104px;
         border-radius: 22px 22px 0 0;
-        padding-top: 48px;
+        padding-top: 32px;
     }
 
     .stats-grid {
@@ -235,7 +235,13 @@
         padding-bottom: 20px;
     }
 
-    .stat-block:nth-last-child(-n+2) {
+    .stat-block--cities {
+        flex-direction: column;
+        grid-column: span 2;
+        text-align: center;
+    }
+
+    .stat-block--cities {
         border-bottom: none;
         padding-bottom: 0;
     }
@@ -519,12 +525,12 @@
     }
 
     .hero-dots {
-        bottom: 42px;
+        bottom: 108px;
     }
 
     .stats-strip {
-        padding: 34px 0 30px;
-        margin-top: -26px;
+        padding: 26px 0 24px;
+        margin-top: -84px;
         border-radius: 18px 18px 0 0;
     }
 
@@ -712,6 +718,10 @@
 
     .stats-grid {
         grid-template-columns: 1fr;
+    }
+
+    .stat-block--cities {
+        grid-column: auto;
     }
 
     .stat-block {
